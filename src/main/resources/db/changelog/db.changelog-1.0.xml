@@ -116,4 +116,49 @@
             </column>
         </createTable>
     </changeSet>
+    <changeSet id="1.0.6" author="Skiba Iryna">
+        <addColumn tableName="users" >
+            <column name="tariff_id" type="BIGINT">
+                <constraints nullable="false"
+                             foreignKeyName="fk_user_tariff"
+                             references="tariffs(tariff_id)"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1.0.7" author="Skiba Iryna">
+        <addColumn tableName="users" >
+            <column name="contact_id" type="BIGINT">
+                <constraints nullable="false"
+                             foreignKeyName="fk_user_contact"
+                             references="contacts(contact_id)"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1.0.8" author="Skiba Iryna">
+        <addColumn tableName="ads" >
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false"
+                             foreignKeyName="fk_ad_user"
+                             references="users(user_id)"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1.0.9" author="Skiba Iryna">
+        <addColumn tableName="ads" >
+            <column name="amenity_id" type="BIGINT">
+                <constraints nullable="false"
+                             foreignKeyName="fk_ad_amenity"
+                             references="amenities(amenity_id)"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="1.0.10" author="Skiba Iryna">
+        <addColumn tableName="images" >
+            <column name="ad_id" type="BIGINT">
+                <constraints nullable="false"
+                             foreignKeyName="fk_image_ad"
+                             references="ads(ad_id)"/>
+            </column>
+        </addColumn>
+    </changeSet>
 </databaseChangeLog>

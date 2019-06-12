@@ -1,4 +1,4 @@
-package itechart.bookng;
+package itechart.booking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
