@@ -3,10 +3,7 @@ package itechart.booking.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "amenities")
@@ -49,4 +46,7 @@ public class Amenity {
     private boolean view;
     private boolean fireplace;
     private boolean shampoo;
+
+    @OneToOne(mappedBy = "amenity", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Ad ad;
 }
