@@ -34,4 +34,16 @@ public class Contact {
 
     public Contact() {
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"id\":" + id +
+                ", \"phoneNumber\":" + phoneNumber +
+                ", \"skype\":\"" + skype + '\"' +
+                ", \"telegram\":" + telegram +
+                ", \"vk\":\"" + vk + '\"' +
+                ", \"email\":\"" + email + '\"' +
+                '}';
+    }
 }

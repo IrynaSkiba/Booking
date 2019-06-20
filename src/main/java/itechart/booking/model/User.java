@@ -44,4 +44,19 @@ public class User {
 
     public User() {
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"id\":" + id +
+                ", \"name\":\"" + name + '\"' +
+                ", \"login\":\"" + login + '\"' +
+                ", \"password\":\"" + password + '\"' +
+                ", \"account\":" + account +
+                ", \"bonusAccount\":" + bonusAccount +
+                ", \"tariff\":" + tariff.getId() +
+                ", \"contact\":" + contact.getId() +
+//                ", ads=" + ads +
+                '}';
+    }
 }
