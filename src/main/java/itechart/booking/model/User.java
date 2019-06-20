@@ -14,6 +14,7 @@ import java.util.List;
 public class User {
     @Id
     @Column(name = "user_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String login;
@@ -32,4 +33,15 @@ public class User {
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Ad> ads;
+
+    public User(String login, String password, String name, Contact contact, Tariff tariff) {
+        this.setLogin(login);
+        this.setPassword(password);
+        this.setName(name);
+        this.setContact(contact);
+        this.setTariff(tariff);
+    }
+
+    public User() {
+    }
 }

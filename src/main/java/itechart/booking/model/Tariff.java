@@ -22,4 +22,7 @@ public class Tariff {
 
     @OneToMany(mappedBy = "tariff", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<User> users;
+
+    public Tariff() {
+    }
 }
