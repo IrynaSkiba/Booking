@@ -25,11 +25,11 @@ public class Contact {
     private User user;
 
     public Contact(int phoneNumber, String skype, int telegram, String vk, String email) {
-        this.setPhoneNumber(phoneNumber);
-        this.setSkype(skype);
-        this.setTelegram(telegram);
-        this.setVk(vk);
-        this.setEmail(email);
+        this.phoneNumber = phoneNumber;
+        this.skype = skype;
+        this.telegram = telegram;
+        this.vk = vk;
+        this.email = email;
     }
 
     public Contact() {

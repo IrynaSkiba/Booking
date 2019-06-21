@@ -19,6 +19,12 @@ public class MyResponse<T> {
         this.errorContent = errorContent;
     }
 
+    public MyResponse(int code, T data) {
+        this.code = code;
+        this.data = data;
+        this.errorContent = "";
+    }
+
     public MyResponse() {
     }
 

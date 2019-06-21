@@ -14,6 +14,7 @@ import java.util.List;
 public class Ad {
     @Id
     @Column(name = "ad_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private int rooms;
     private String city;
@@ -35,4 +36,39 @@ public class Ad {
 
     @OneToMany(mappedBy = "ad", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Image> images;
+
+    public Ad(int rooms, String city, String street, int house, int floor,
+              int flat, BigDecimal longitude, BigDecimal latitude, BigDecimal price,
+              User user, Amenity amenity) {
+        this.rooms = rooms;
+        this.city = city;
+        this.street = street;
+        this.house = house;
+        this.floor = floor;
+        this.flat = flat;
+        this.longitude = longitude;
+        this.latitude = latitude;
+        this.price = price;
+        this.user = user;
+        this.amenity = amenity;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"id\":" + id +
+                ", \"rooms\":" + rooms +
+                ", \"city\":\"" + city + '\"' +
+                ", \"street\":\"" + street + '\"' +
+                ", \"house\":" + house +
+                ", \"floor\":" + floor +
+                ", \"flat\":" + flat +
+                ", \"longitude\":" + longitude +
+                ", \"latitude\":" + latitude +
+                ", \"price\":" + price +
+                ", \"user\":" + user.getId() +
+                ", \"amenity\":" + amenity +
+               // ", \"images\":" + images +
+                '}';
+    }
 }
