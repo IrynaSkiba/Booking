@@ -22,7 +22,7 @@
         <!-->Maven<-->
         <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
         <!-->MySQL<-->
-        <mysql-connector-java.version>8.0.15</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
         <!-->Lombok<-->
         <lombok.version>1.18.4</lombok.version>
         <!-->Oauth2<-->
